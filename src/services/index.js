@@ -1,17 +1,12 @@
-import express from "express"
-
-
+import express from "express";
+import studentsRoute from "./students/index.js";
+import tutorsRoute from "./tutors/index.js";
+import modulesRoute from "./modules/index.js";
 
 const route = express.Router();
-
-
-// const studentsRoute = require("./students");
-// const tutorsRoute = require("./tutors");
-// const modulesRoute = require("./modules");
 
 route.use("/tutors", tutorsRoute);
 route.use("/modules", modulesRoute);
 route.use("/students", studentsRoute);
 
-
-export default route
+export default route;

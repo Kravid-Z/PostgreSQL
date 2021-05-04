@@ -11,9 +11,10 @@ const read = promisify(fs.readFile);
 const __dirname = dirname(import.meta.url);
 
 const sqlFilePath = join(__dirname, "import.sql");
-
+console.log(sqlFilePath)
 const createTable = async () => {
   try {
+    
     const data = await read(sqlFilePath);
     const sqlQueryString = data.toString();
     await db.query(sqlQueryString);

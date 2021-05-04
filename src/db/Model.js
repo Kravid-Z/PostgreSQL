@@ -36,7 +36,7 @@ class Model {
       const { rows } = await db.query(query);
       return rows[0];
     }
-    
+
     async create(data) {
       if (!data || Object.entries(data).length === 0) {
         throw new Error("Data is required to create ", this.name);
@@ -75,6 +75,6 @@ class Model {
       const { command, rowCount } = await db.query(query);
       return { command, rowCount };
     }
-  }
+}
 
 export default Model;
