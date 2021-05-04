@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This is a fantasy project in PostgreSQL world",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "prestart": "npm run setup",
     "setup": "node src/scripts",
